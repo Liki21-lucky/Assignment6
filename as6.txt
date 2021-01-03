@@ -1,0 +1,36 @@
+ASSIGNMENT  6
+
+1)maximum element in them stack
+
+max=x[0]
+
+2)minimum element in the stack
+
+
+min=x[n-1]
+
+void pop()
+{
+if(top == -1)
+{
+printf("Underflow\n");
+return;
+}
+int i,x[10],j;
+for(i=0;i<n;i++)
+x[i] = stack[top--];
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+  if(x[i]>x[j])
+   {    temp=x[i];
+        x[i]=x[j];
+        x[j]=temp;
+    }
+}
+}
+for(i=0;i<n;i++)
+printf("Max :%d",x[0]);
+printf("Min: %d", x[n-1]);
+}
